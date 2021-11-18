@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>pswsm</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/7cb3f7dca8.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="has-background-dark has-text-light">
+    <div class="container">
+      <nav class="navbar is-dark">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://pswsm.cat">pswsm</a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu is-active">
+          <div class="navbar-end">
+            {% for navitem in navitems %}
+            <a class="navbar-item" href="{{ navitem.ref }}" target="_self">{{ navitem.name }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </nav>
+    </div>
+    {% block content %}{% endblock %}
+  </body>
+</html>
