@@ -2,13 +2,18 @@
 
 {% block content %}
   <div class="container">
-    {% for thing in abtme %}
-    <p class="title is-4 has-text-light">{{ thing.name }}</p>
-    <ul>
-      {% for subthing in abtme.subthing %}
-      <li>{{ subthing.name }}
+    <div class="columns is-multiline">
+      {% for key, value in abtme.items() %}
+      <div class="column is-half-desktop">
+        <p class="title is-4 has-text-light">{{ key|title }}</p>
+        <ul>
+          {% for subvalue in value %}
+          <li>{{ subvalue|title }}</li>
+          {% endfor %}
+        </ul>
+      </div>
       {% endfor %}
-    </ul>
-    {% endfor %}
-  </div>  
+    </div>
+
+  </div>
 {% endblock %}
