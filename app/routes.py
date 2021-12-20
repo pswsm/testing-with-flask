@@ -5,7 +5,7 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index():
-    navitems = [
+    navitems: list[dict[str:str]] = [
             {
                 'ref': '/japones',
                 'name': 'Japones'
@@ -19,24 +19,13 @@ def index():
                 'name': 'Nextcloud'
             }
         ]
-    abtme = [
-            {
-                'name': 'Idiomes',
-                'subthing': [
-                    {'name': 'Català'},
-                    {'name': 'Castellà'},
-                    {'name': 'Anglès'},
-                    {'name': 'Japonès'}
-                    ]
-            },
-            {
-                'name': 'Passatemps',
-                'subthing': [
-                    {'name': 'Aprendre programació'},
-                    {'name': 'Aprendre idiomes'}
-                    ]
-            }
-            ]
+
+    passatemps: list[str] = ['aprendre programació', 'aprendre idiomes', 'jugar a videojocs', 'fotografía']
+    estudis: list[str] = ['CFGM Sistemes Microinformàtics i Xarxes', '(Actual) CFGS Desenvolupament Web - Perfil Bioinformàtica']
+    programacio: list[str] = ['Python', 'C++', 'Shell', 'JavaScript']
+    languages: list[str] = ['catala nadiu', 'castella nadiu', 'angles B2', 'japones A2']
+    abtme: list[str]= {'passatemps': passatemps, 'estudis': estudis, 'programacio': programacio, 'idiomes': languages}
+
     return render_template('index.html', navitems=navitems, abtme=abtme)
 
 
