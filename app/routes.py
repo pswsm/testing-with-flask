@@ -22,7 +22,7 @@ def index():
 
     passatemps: list[str] = ['aprendre programació', 'aprendre idiomes', 'jugar a videojocs', 'fotografía']
     estudis: list[str] = ['CFGM Sistemes Microinformàtics i Xarxes', '(Actual) CFGS Desenvolupament Web - Perfil Bioinformàtica']
-    programacio: list[str] = ['Python', 'C++', 'Shell', 'JavaScript']
+    programacio: list[str] = ['Python', 'C++', 'Shell', 'Rust']
     languages: list[str] = ['catala nadiu', 'castella nadiu', 'angles B2', 'japones A2']
     abtme: list[str]= {'passatemps': passatemps, 'estudis': estudis, 'programacio': programacio, 'idiomes': languages}
 
